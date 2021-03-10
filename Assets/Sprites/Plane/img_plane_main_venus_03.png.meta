@@ -1,0 +1,356 @@
+fileFormatVersion: 2
+guid: 8ad66101099e95b4a807115ad78eea56
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4281929395628852945
+    second: img_plane_main_venus_03_0
+  - first:
+      213: 6484606629678926922
+    second: img_plane_main_venus_03_1
+  - first:
+      213: 4394396272625153362
+    second: img_plane_main_venus_03_2
+  - first:
+      213: 3075092614885612768
+    second: img_plane_main_venus_03_3
+  - first:
+      213: 8031047548833836431
+    second: img_plane_main_venus_03_4
+  - first:
+      213: -8080375079678887134
+    second: img_plane_main_venus_03_5
+  - first:
+      213: -2836470219335133354
+    second: img_plane_main_venus_03_6
+  - first:
+      213: -4729721928118320362
+    second: img_plane_main_venus_03_7
+  - first:
+      213: -5678851679021743928
+    second: img_plane_main_venus_03_8
+  - first:
+      213: -2591540735067247902
+    second: img_plane_main_venus_03_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 830
+        width: 276
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f293d3cb6e78394c0800000000000000
+      internalID: -4281929395628852945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_1
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 826
+        width: 209
+        height: 196
+      alignment: 9
+      pivot: {x: 0.49282295, y: 0.627551}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cc72e6f53fdf950800000000000000
+      internalID: 6484606629678926922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 657
+        width: 272
+        height: 171
+      alignment: 9
+      pivot: {x: 0.49632353, y: 0.5614035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2557f10a0280cfc30800000000000000
+      internalID: 4394396272625153362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_3
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 650
+        width: 230
+        height: 173
+      alignment: 9
+      pivot: {x: 0.49565214, y: 0.5953757}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec1fa1d07cecaa20800000000000000
+      internalID: 3075092614885612768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 488
+        width: 266
+        height: 166
+      alignment: 9
+      pivot: {x: 0.47368422, y: 0.57831323}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d23820233047f60800000000000000
+      internalID: 8031047548833836431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_5
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 460
+        width: 178
+        height: 186
+      alignment: 9
+      pivot: {x: 0.48314607, y: 0.60215056}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b32db3dadbcdf80800000000000000
+      internalID: -8080375079678887134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 281
+        width: 260
+        height: 206
+      alignment: 9
+      pivot: {x: 0.50384617, y: 0.4514563}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6571e802d55d2a8d0800000000000000
+      internalID: -2836470219335133354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_7
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 283
+        width: 238
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613c12c27f6ac5eb0800000000000000
+      internalID: -4729721928118320362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 72
+        width: 128
+        height: 205
+      alignment: 9
+      pivot: {x: 0.4765625, y: 0.6439024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c047cb5c7aa031b0800000000000000
+      internalID: -5678851679021743928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_plane_main_venus_03_9
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 77
+        width: 249
+        height: 199
+      alignment: 9
+      pivot: {x: 0.4698795, y: 0.4321608}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaac599e6ff80cd0800000000000000
+      internalID: -2591540735067247902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
