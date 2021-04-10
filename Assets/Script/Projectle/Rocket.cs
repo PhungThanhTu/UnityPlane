@@ -29,7 +29,7 @@ public class Rocket : MonoBehaviour
         Vector3 FacingDir = new Vector3(0,0,0);
         GameObject[] target = GameObject.FindGameObjectsWithTag("Enemy");
         float minDist = Mathf.Infinity;
-        GameObject closestEnemy = new GameObject();
+        GameObject closestEnemy = null;
 
         foreach(GameObject closestTarget in target)
         {   if(closestTarget != null)
