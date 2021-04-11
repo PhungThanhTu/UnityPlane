@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    
+    public Vector3 direction = Vector3.up;   
     public int Damage = 8;
     public float FlyingSpeed = 2;
     public float DeathTime = 2;
@@ -19,9 +19,13 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += new Vector3(0, 1, 0) * FlyingSpeed*Time.deltaTime;
-       
-        if(DeathTime <= 0)
+        this.transform.position += direction * FlyingSpeed*Time.deltaTime;
+
+
+        float Angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
+        this.transform.rotation = Quaternion.Euler(0, 0, Angle);
+
+        if (DeathTime <= 0)
         {
             Explode();
         }

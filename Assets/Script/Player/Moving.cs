@@ -17,7 +17,11 @@ public class Moving : MonoBehaviour
     void Update()
     {
         LeadToMouse();
-        MoveToMouse();
+        if(Input.GetMouseButton(1))
+        {
+            MoveToMouse();
+        }
+        
     }
 
     void LeadToMouse()

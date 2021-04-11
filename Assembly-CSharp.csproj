@@ -65,17 +65,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Background\BackgroundMoving.cs" />
-    <Compile Include="Assets\Script\Booster.cs" />
     <Compile Include="Assets\Script\Effect\DestroyAfterAnim.cs" />
-    <Compile Include="Assets\Script\Enemy.cs" />
+    <Compile Include="Assets\Script\Enemy\Booster.cs" />
+    <Compile Include="Assets\Script\Enemy\Enemy.cs" />
+    <Compile Include="Assets\Script\Globals\GlobalClass.cs" />
     <Compile Include="Assets\Script\Mechanizm\Death.cs" />
     <Compile Include="Assets\Script\Mechanizm\Explode.cs" />
     <Compile Include="Assets\Script\Mechanizm\Health.cs" />
     <Compile Include="Assets\Script\Player\Buffering.cs" />
     <Compile Include="Assets\Script\Player\GunPoint.cs" />
-    <Compile Include="Assets\Script\Player\HealthBar.cs" />
     <Compile Include="Assets\Script\Player\Moving.cs" />
     <Compile Include="Assets\Script\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Script\Player\PlayerHitBox.cs" />
+    <Compile Include="Assets\Script\Player\SkillCharging.cs" />
+    <Compile Include="Assets\Script\Player\Skills\RocketCluster.cs" />
+    <Compile Include="Assets\Script\Player\ValueBar.cs" />
     <Compile Include="Assets\Script\Projectle\Bullet.cs" />
     <Compile Include="Assets\Script\Projectle\DealDmgAndExplode.cs" />
     <Compile Include="Assets\Script\Projectle\Rocket.cs" />
@@ -640,6 +644,9 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/Git/UnityPlane/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>D:/Git/UnityPlane/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

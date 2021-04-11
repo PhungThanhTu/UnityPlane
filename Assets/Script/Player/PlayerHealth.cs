@@ -7,17 +7,21 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth;
     public int currentHealth;
 
-    public HealthBar healthBar;
+
+    public Transform gameUI;
+    public ValueBar healthBar;
     // Start is called before the first frame update
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        healthBar.SetValue(currentHealth);
     }
 
     private void Start()
     {
-        healthBar.SetMaxHealth(maxHealth);
+        gameUI = GameObject.Find("gameUI").transform;
+        healthBar = Instantiate(Resources.Load("UI/Health") as GameObject, gameUI).GetComponent<ValueBar>();
+        healthBar.SetMaxValue(maxHealth);
     }
     private void Update()
     {

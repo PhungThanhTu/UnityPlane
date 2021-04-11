@@ -6,7 +6,7 @@ public class Buffering : MonoBehaviour
 {
 
     SpriteRenderer playerSprite;
-    BoxCollider2D playerCollider;
+    public BoxCollider2D playerCollider;
     public float duration = 1;
     public float interval = 0.1f;
 
@@ -45,10 +45,12 @@ public class Buffering : MonoBehaviour
     void StopBuffering()
     {
         playerSprite.enabled = true;
+        playerCollider.enabled = true;
     }
     public void StartBuffering()
     {
         playerSprite.enabled = false;
         currentDuration = duration;
+        playerCollider.enabled = false;
     }
 }

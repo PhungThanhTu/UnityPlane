@@ -11,7 +11,7 @@ public class GunPoint : MonoBehaviour
     public GameObject prefabBullet;
 
     // tat tu dong ban
-    public bool autoShoot = false;
+    public bool autoShoot = true;
 
     float currentDelay = 0;
     float currentComboDelay = 0;
@@ -32,10 +32,7 @@ public class GunPoint : MonoBehaviour
             currentDelay += Time.deltaTime;
         }
        
-        if(Input.GetMouseButtonDown(1))
-        {
-            autoShoot = !autoShoot;
-        }
+        
         if(autoShoot || Input.GetMouseButtonDown(0))
         {
             if(currentDelay >= fireDelay)
@@ -69,28 +66,35 @@ public class GunPoint : MonoBehaviour
             
             for(int i = 0; i < sideBull; i++)
             {
-                Vector3 spacingVector;
+                Vector3 bulletDir;
+                Vector3 reflectBulletDir;
+                float Spacing;
                 if(middleBull == 0)
-                {   
-                    int Spacing = 2*i + 1;
-                    spacingVector = new Vector3(Spacing * 0.1f, 0, 0);
+                {
+                   bulletDir = new Vector3(0.025f*(2*i+1),1, 0).normalized;
+                   reflectBulletDir = new Vector3(-0.025f*(2*i + 1), 1, 0).normalized;
+                    Spacing = 0.05f*(2 * i + 1);
                 }
                 else
                 {
-                    int Spacing = 2 * (i+1);
-                    spacingVector = new Vector3(Spacing * 0.1f, 0, 0);
+                    bulletDir = new Vector3(0.05f*(i+1), 1, 0).normalized;
+                    reflectBulletDir = new Vector3(-0.05f*(i+1), 1, 0).normalized;
+                    Spacing = 0.1f*(i + 1);
                 }
-                
-                    Instantiate(prefabBullet, transform.position + spacingVector , Quaternion.identity);
-                    Instantiate(prefabBullet, transform.position - spacingVector , Quaternion.identity);
-                
-               
+
+                Instantiate(prefabBullet, transform.position + new Vector3(Spacing,0,0), Quaternion.identity).GetComponent<Bullet>().direction = bulletDir;
+                Instantiate(prefabBullet, transform.position + new Vector3(-Spacing,0,0), Quaternion.identity).GetComponent<Bullet>().direction = reflectBulletDir;
             }
+
+
             currentComboDelay = 0;
+            if (currentComboCount == 0)
+            {
+                isShooting = false;
+            }
+
         }
-        if(currentComboCount == 0)
-        {
-            isShooting = false;
-        }
+       
     }
+        
 }

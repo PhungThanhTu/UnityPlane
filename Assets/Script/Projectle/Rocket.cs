@@ -6,6 +6,7 @@ public class Rocket : MonoBehaviour
 {
     public float Speed = 10;
     Vector3 direction = Vector3.up;
+    public float probeRange = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,13 +36,13 @@ public class Rocket : MonoBehaviour
         {   if(closestTarget != null)
             {
                 float calcingDistance = Vector3.Distance(this.transform.position, closestTarget.transform.position);
-                if (calcingDistance <= minDist)
+                if (calcingDistance <= minDist && calcingDistance < probeRange)
                 {
                     minDist = calcingDistance;
                     closestEnemy = closestTarget;
                 }
             }
-        if(target.Length > 0)
+        if(closestEnemy != null)
         {
                 FacingDir = (closestEnemy.transform.position - this.transform.position).normalized;
         }
