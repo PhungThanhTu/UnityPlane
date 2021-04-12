@@ -6,7 +6,10 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    public GameObject prefabEnemy;
+    public GameObject[] prefabEnemies;
+    public int numType = 0;
+    public GameObject[] prefabBosses;
+    public int bossTypeCount = 0;
     float spawnTime;
 
     // Spawn Location
@@ -23,15 +26,43 @@ public class EnemySpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spawnTime <= 0)
-        {
-            spawnTime = Random.Range(3f, 10f);
+        
+    }
 
-            Instantiate(prefabEnemy, transform.position, Quaternion.identity);
-        }
-        else
+
+    public void SpawnEnemy(int id)
+    {
+
+    }
+
+    void LoadResources()
+    {
+        while(true)
         {
-            spawnTime -= Time.deltaTime;
+            prefabEnemies[numType] = Resources.Load("Enemies/Enemy" + numType.ToString()) as GameObject;
+            if(prefabEnemies[numType] == null)
+            {
+                numType++;
+                break;
+            }
+            else
+            {
+                numType++;
+            }
         }
+        while (true)
+        {
+            prefabBosses[bossTypeCount] = Resources.Load("Bosses/Boss" + bossTypeCount.ToString()) as GameObject;
+            if (prefabBosses[bossTypeCount] == null)
+            {
+                bossTypeCount++;
+                break;
+            }
+            else
+            {
+                bossTypeCount++;
+            }
+        }
+
     }
 }

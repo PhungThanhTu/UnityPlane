@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rocket : MonoBehaviour
 {
     public float Speed = 10;
-    Vector3 direction = Vector3.up;
+    public Vector3 direction = Vector3.up;
     public float probeRange = 2;
     // Start is called before the first frame update
     void Start()

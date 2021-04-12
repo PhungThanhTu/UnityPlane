@@ -11,7 +11,7 @@ public class SkillCharging : MonoBehaviour
     ValueBar manabar;
 
     // Skill Object
-    public int skillId = 0;
+    public int skillId = 1;
     GameObject skillPrefab;
 
     public float CD = 10;
@@ -43,6 +43,10 @@ public class SkillCharging : MonoBehaviour
             }
         }
         manabar.SetValue((int)currentCD);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CastSkill();
+        }
     }
     [ContextMenu("CAST")]
     public void CastSkill()
@@ -51,6 +55,7 @@ public class SkillCharging : MonoBehaviour
         {
             currentCD = 0;
             CDReady = false;
+            manabar.SetValue((int)currentCD);
 
             if (skillPrefab != null)
             {
