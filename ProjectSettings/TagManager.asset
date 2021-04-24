@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Rocket
   - Gun
+  - Bullet
+  - Drops
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,10 @@ public class GunPoint : MonoBehaviour
     public int countBulletPerShot = 1;
     public float comboBulletCount = 6;
     public float fireDelay = 1;
+
+    int Level = 1;
     public GameObject prefabBullet;
+    
 
     // tat tu dong ban
     public bool autoShoot = true;
@@ -20,6 +23,8 @@ public class GunPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        prefabBullet = Resources.Load("Bullet/Bullet1") as GameObject;
+
         currentComboCount = comboBulletCount;
         currentComboDelay = fireDelay;
     }
@@ -95,6 +100,21 @@ public class GunPoint : MonoBehaviour
 
         }
        
+    }
+
+    public void BulletUp()
+    {
+        GameObject upbullet = Resources.Load("Bullet/Bullet" + (int)(Level + 1)) as GameObject;
+
+        if(upbullet != null)
+        {
+            Level++;
+            prefabBullet = upbullet;
+        }
+        else
+        {
+            Debug.Log("Bullet Maxed");
+        }
     }
         
 }

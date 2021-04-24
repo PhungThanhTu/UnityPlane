@@ -3,7 +3,14 @@ guid: f47b283ae27303c46a658151fd3149ec
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - prefabExplosion: {instanceID: 0}
+  - drop1: {fileID: 6874153267212916259, guid: 2471b76627d80a145bf99d55a47f7590, type: 3}
+  - drop2: {fileID: 9009470782494579293, guid: 91342a9afd5e4984f92717518a24bc1a, type: 3}
+  - drop3: {fileID: 725400664983153834, guid: 3cbcdd023652e8e4d9b01143a39b317b, type: 3}
+  - drop4: {fileID: 7185782604700422328, guid: 0204ee8a90250de468c0248716df37b8, type: 3}
+  - goldDrop: {instanceID: 0}
+  - diamondDrop: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

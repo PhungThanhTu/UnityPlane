@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetValue(currentHealth);
+
+       
     }
 
     private void Start()
@@ -28,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             this.GetComponent<Death>().onDeath();
+            GameObject.Find("TheGameManager").GetComponent<Game>().GameOver();
         }
     }
 }

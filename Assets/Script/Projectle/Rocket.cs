@@ -6,7 +6,7 @@ public class Rocket : MonoBehaviour
 {
     public float Speed = 10;
     public Vector3 direction = Vector3.up;
-    public float probeRange = 2;
+    public float probeRange = 100;
     // Start is called before the first frame update
     void Start()
     {

@@ -6,10 +6,19 @@ public class Health : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
+    public bool Invincible = false;
+
+    public RedFlash flasher;
     // Start is called before the first frame update
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
+        if(!Invincible)
+        {
+            currentHealth -= damage;
+            flasher.StartFlash();
+        }
+
+        
     }
     private void Update()
     {

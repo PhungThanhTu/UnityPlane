@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7855924629887780218}
   - component: {fileID: 7855924629887780213}
   - component: {fileID: 2694267314493342898}
-  - component: {fileID: 292252493453534604}
+  - component: {fileID: 8884198835735296107}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Enemy
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7855924629887780209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.162, y: 2.96, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbaced1efde74cb46bb49263c54a0257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 1000
+  currentHealth: 1000
 --- !u!58 &7855924629887780218
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabExplosion: {fileID: 3644427305768983330, guid: 006ff7f5768ee904584af57307ab2044,
     type: 3}
---- !u!114 &292252493453534604
+--- !u!114 &8884198835735296107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,5 +184,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873e502e19943a746a3ca6730ee5c099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 0.1
   damage: 20

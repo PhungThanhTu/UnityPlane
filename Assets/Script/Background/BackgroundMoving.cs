@@ -22,7 +22,6 @@ public class BackgroundMoving : MonoBehaviour
         {
             float deltaY = transform.position.y + 10.24f;
             this.transform.position = new Vector3(0, 10.24f+deltaY,0);
-            Debug.Log(transform.position.y.ToString());
         }
     }
 }

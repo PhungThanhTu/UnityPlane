@@ -34,8 +34,8 @@ public class RocketCluster : MonoBehaviour
             currentInterval = 0;
 
             RocketCount--;
-            componentPrefabRocket.direction = new Vector3(Random.Range(-1f,1f),1,0).normalized;
-            Instantiate(componentPrefabRocket, transform.position, Quaternion.identity);
+            componentPrefabRocket.direction = new Vector3(Random.Range(-0.3f,0.3f),1,0).normalized;
+            Instantiate(componentPrefabRocket, transform.position + new Vector3(Random.Range(-1f,1f),0,0), Quaternion.identity);
         }
     }
 }

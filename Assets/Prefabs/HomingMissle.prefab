@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7709194964076160184}
   m_Layer: 0
   m_Name: HomingMissle
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8216927177779931132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.65, y: -1.06, z: 0}
+  m_LocalPosition: {x: 0.483, y: -0.628, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  direction: {x: 0.32172862, y: 0.94683194, z: 0}
+  direction: {x: -0.11971107, y: 0.9928088, z: 0}
   probeRange: 2
 --- !u!114 &8216927177779931110
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18475aed054c204448fee827378a3780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 20
+  Damage: 2
   DeathTime: 4
   prefabExplosion: {fileID: 4893385471440882794, guid: 5ded459d5296db846b182537396949a9,
     type: 3}
@@ -214,7 +214,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.768697
+        value: 0.565572
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -222,7 +222,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.284361
+        time: 0.54052734
         value: 0
         inSlope: 0
         outSlope: 0

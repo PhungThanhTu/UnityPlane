@@ -6,11 +6,16 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    public GameObject[] prefabEnemies;
-    public int numType = 0;
-    public GameObject[] prefabBosses;
-    public int bossTypeCount = 0;
-    float spawnTime;
+    public List<GameObject> prefabEnemies;
+    int numType = 0;
+
+    public float spawnTime = 0.5f;
+    float currentSpawnTime = 0;
+
+    public int currentId = 0;
+    public int count = 0;
+
+    public Transform spawnPlace;
 
     // Spawn Location
 
@@ -19,50 +24,61 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnTime = Random.Range(3f, 10f);
-        
+
+        LoadResources();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // spawn time count 
+        if(count > 0)
+        {
+            currentSpawnTime += Time.deltaTime;
+
+            if (currentSpawnTime >= spawnTime)
+            {
+                currentSpawnTime = 0;
+                SpawnEnemy(currentId);
+                count--;
+            }
+
+        }
+
+      
     }
 
 
     public void SpawnEnemy(int id)
     {
-
+        if(prefabEnemies[id] != null)
+        {
+            Instantiate(prefabEnemies[id], spawnPlace.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Enemy type not found");
+        }
+        
     }
 
     void LoadResources()
     {
         while(true)
         {
-            prefabEnemies[numType] = Resources.Load("Enemies/Enemy" + numType.ToString()) as GameObject;
-            if(prefabEnemies[numType] == null)
+            GameObject loadEnemy = Resources.Load("Enemies/Enemy" + numType.ToString()) as GameObject;
+            if(loadEnemy == null)
             {
-                numType++;
+                
                 break;
             }
             else
             {
+                prefabEnemies.Add(loadEnemy);
                 numType++;
             }
         }
-        while (true)
-        {
-            prefabBosses[bossTypeCount] = Resources.Load("Bosses/Boss" + bossTypeCount.ToString()) as GameObject;
-            if (prefabBosses[bossTypeCount] == null)
-            {
-                bossTypeCount++;
-                break;
-            }
-            else
-            {
-                bossTypeCount++;
-            }
-        }
+       
 
     }
 }
