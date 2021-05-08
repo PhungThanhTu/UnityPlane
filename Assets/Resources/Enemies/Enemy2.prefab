@@ -223,9 +223,12 @@ MonoBehaviour:
   drop2: {fileID: 9009470782494579293, guid: 91342a9afd5e4984f92717518a24bc1a, type: 3}
   drop3: {fileID: 725400664983153834, guid: 3cbcdd023652e8e4d9b01143a39b317b, type: 3}
   drop4: {fileID: 7185782604700422328, guid: 0204ee8a90250de468c0248716df37b8, type: 3}
-  goldDrop: {fileID: 0}
-  diamondDrop: {fileID: 0}
+  goldDrop: {fileID: 5808252771885120916, guid: 70af4dcbdea97a6448df0bcc42e13aea,
+    type: 3}
+  diamondDrop: {fileID: 4611693575218021726, guid: a34849a6d103c064591e1b10179fa8a8,
+    type: 3}
   ranNum: 0
+  isBoss: 0
 --- !u!114 &663089453087214921
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,12 +8,14 @@ public class SkillCharging : MonoBehaviour
     Transform gameUI;
 
     public GameObject prefabManabar;
+    
     ValueBar manabar;
+    Button castSkill;
 
     // Skill Object
     public int skillId = 1;
-    GameObject skillPrefab;
-
+    public GameObject skillPrefab;
+    GameObject skillImage;
     public float CD = 10;
     float currentCD = 0;
 
@@ -22,11 +24,21 @@ public class SkillCharging : MonoBehaviour
     void Start()
     {
         gameUI = GameObject.Find("gameUI").transform;
-        skillPrefab = Resources.Load("Skill/Skill" + skillId) as GameObject;
+        skillPrefab = Resources.Load("Skills/Skill" + skillId + "/Skill") as GameObject;
+        skillImage = Resources.Load("Skills/Skill" + skillId + "/Sprite") as GameObject;
         prefabManabar = Resources.Load("UI/Mana") as GameObject;
+
+
+       
+
         manabar = Instantiate(prefabManabar, gameUI).GetComponent<ValueBar>();
         manabar.SetMaxValue((int)CD);
+
+        //castSkill = Instantiate(skillImage, gameUI).GetComponent<Button>();
+        //castSkill.onClick.AddListener(CastSkill);
     }
+    
+
 
     // Update is called once per frame
     void Update()
@@ -65,6 +77,15 @@ public class SkillCharging : MonoBehaviour
         }
        
         
+    }
+
+    private void OnDestroy()
+    {
+        if(castSkill != null)
+        {
+            Destroy(castSkill.gameObject);
+        }
+     
     }
 
 

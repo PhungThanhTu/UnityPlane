@@ -10,6 +10,10 @@ public class Game : MonoBehaviour
     float currentWaveDelay = 0;
     // waveSpawner
     WaveSpawner waveSpawner;
+    // Money
+    PlayerData playerData;
+    public int starCollected = 0;
+    public int diamondCollected = 0;
     // UI
     //  GameUI < static >
     public Transform gameUI;
@@ -17,10 +21,13 @@ public class Game : MonoBehaviour
     public Transform menuUI;
     // ShopUI < static >  
     public Transform shopUI;
+    ShopUI shopUIComponent;
 
     // GameOverUI < dynamic >   _WIP
     public GameObject gameOverUI;
     public GameObject RedBackGroundUI;
+    // Mission Accomplished UI
+    public GameObject gameFinishUi;
 
     public float DelayGameOver = 3;
     float currentDelayGameOver = 0;
@@ -79,9 +86,12 @@ public class Game : MonoBehaviour
     void LoadComponent()
     {
         waveSpawner = this.gameObject.GetComponent<WaveSpawner>();
+        shopUIComponent = shopUI.GetComponent<ShopUI>();
+        shopUIComponent.plrdata = playerData;
     }
     void LoadResources() // Load sound and background
     {
+        playerData = Resources.Load("PlayerData") as PlayerData;
         waveUI = Resources.Load("UI/wave") as GameObject;
         plane = Resources.Load("Plane") as GameObject;
     }
@@ -99,6 +109,7 @@ public class Game : MonoBehaviour
         Debug.Log("Enemy Alive After Game Start : " + waveSpawner.EnemyAlive);
 
     }
+    
     void Clear()
     {
         
@@ -119,6 +130,9 @@ public class Game : MonoBehaviour
             Destroy(obj);
         }
         gameOverUI.gameObject.SetActive(false);
+        gameFinishUi.gameObject.SetActive(false);
+        starCollected = 0;
+        diamondCollected = 0;
         RedBackGroundUI.gameObject.SetActive(false);
         
     }
@@ -129,6 +143,7 @@ public class Game : MonoBehaviour
     public void OpenShop()
     {
         shopUI.gameObject.SetActive(true);
+        shopUIComponent.Validation();
     }
     public void GameOver()
     {
@@ -138,6 +153,14 @@ public class Game : MonoBehaviour
 
 
         Debug.Log("Enemy Alive  when game over:" + waveSpawner.EnemyAlive);
+    }
+    public void GameFinished()
+    {
+        FinishUI fScript = gameFinishUi.gameObject.GetComponent<FinishUI>();
+        gameFinishUi.gameObject.SetActive(true);
+        fScript.Validation(starCollected, diamondCollected);
+        playerData.AddDiamond(diamondCollected);
+        playerData.AddStar(starCollected);
     }
     public void GameOverUIAppear()
     {
@@ -154,7 +177,7 @@ public class Game : MonoBehaviour
     public void MainMenu()
     {
         Clear();
-
+        
         gameUI.gameObject.SetActive(false);
         menuUI.gameObject.SetActive(true);
     }

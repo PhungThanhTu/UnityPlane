@@ -102,6 +102,7 @@ public class WaveSpawner : MonoBehaviour
         if(waveIndex == waveDataObject.data.data.waves.Length)
         {
             ResetTheWaveSpawner();
+            isFinish = true;
         }
         else
         {
@@ -179,21 +180,33 @@ public class WaveSpawner : MonoBehaviour
     public void Finish()
     {
         // start finish delay
-        isFinish = true;
 
-        CoolAppear planecmp = GameObject.FindGameObjectWithTag("Player").GetComponent<CoolAppear>();
 
-        if(planecmp != null)
+        
+        if(!isFinish)
         {
-            planecmp.enabled = true;
-            planecmp.Finish();
+            CoolAppear planecmp = GameObject.FindGameObjectWithTag("Player").GetComponent<CoolAppear>();
+
+            if (planecmp != null)
+            {
+                planecmp.enabled = true;
+                planecmp.Finish();
+            }
         }
+        // destroy all bullet in the area
+        foreach(GameObject obj in GameObject.FindGameObjectsWithTag("Bullet"))
+        {
+            obj.gameObject.GetComponent<Bullet>().Explode();
+        }
+
+        isFinish = true;
     }
 
     public void AfterFinishDelay()
     {
         // Finish
-        gameManager.WaveNotification("Finished");
+        Debug.Log("Finish");
+        gameManager.GameFinished();
     }
 
 

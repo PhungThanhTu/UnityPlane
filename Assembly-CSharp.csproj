@@ -70,6 +70,7 @@
     <Compile Include="Assets\Script\Bosses\Boss1\BossSpawner.cs" />
     <Compile Include="Assets\Script\Bosses\Boss1\GunPointController.cs" />
     <Compile Include="Assets\Script\Bosses\Boss1\Warning.cs" />
+    <Compile Include="Assets\Script\Drops\FlyToPlayer.cs" />
     <Compile Include="Assets\Script\Drops\ItemEffect.cs" />
     <Compile Include="Assets\Script\Effect\DestroyAfterAnim.cs" />
     <Compile Include="Assets\Script\Globals\GlobalClass.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\Script\Player\PlayerData.cs" />
     <Compile Include="Assets\Script\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Script\Player\PlayerHitBox.cs" />
+    <Compile Include="Assets\Script\Player\Skill.cs" />
     <Compile Include="Assets\Script\Player\SkillCharging.cs" />
     <Compile Include="Assets\Script\Player\Skills\RocketCluster.cs" />
     <Compile Include="Assets\Script\Player\ValueBar.cs" />
@@ -100,7 +102,9 @@
     <Compile Include="Assets\Script\Projectle\DealDmgAndExplode.cs" />
     <Compile Include="Assets\Script\Projectle\Rocket.cs" />
     <Compile Include="Assets\Script\Spawner\EnemySpawner.cs" />
+    <Compile Include="Assets\Script\UI\FinishUI.cs" />
     <Compile Include="Assets\Script\UI\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Script\UI\ShopUI.cs" />
     <Compile Include="Assets\Script\UI\WaveNotification.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/2019.4.24f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

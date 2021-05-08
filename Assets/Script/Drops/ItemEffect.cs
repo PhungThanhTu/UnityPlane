@@ -7,7 +7,9 @@ public enum BuffEffect
     attack_speed,
     num_bullet,
     bullet_up,
-    combo_up
+    combo_up,
+    gold_up,
+    diamond_up
 }
 
 
@@ -16,6 +18,7 @@ public class ItemEffect : MonoBehaviour
     GunPoint buffedObject;
 
     GameObject collectEffect;
+    public float speed = 0.5f;
 
     public BuffEffect effect;
 
@@ -27,7 +30,7 @@ public class ItemEffect : MonoBehaviour
     }
     private void Update()
     {
-        gameObject.transform.position += new Vector3(0, -0.5f, 0)*Time.deltaTime;
+        gameObject.transform.position += new Vector3(0, -speed, 0)*Time.deltaTime;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -58,6 +61,16 @@ public class ItemEffect : MonoBehaviour
                     {
                         if(buffedObject.comboBulletCount <4)
                             buffedObject.comboBulletCount++;
+                        break;
+                    }
+                case BuffEffect.gold_up:
+                    {
+                        GameObject.Find("TheGameManager").GetComponent<Game>().starCollected++;
+                        break;
+                    }
+                case BuffEffect.diamond_up:
+                    {
+                        GameObject.Find("TheGameManager").GetComponent<Game>().diamondCollected++;
                         break;
                     }
             }

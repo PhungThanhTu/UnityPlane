@@ -14,7 +14,7 @@ public class Death : MonoBehaviour
     public GameObject diamondDrop;
 
     public float ranNum;
-    
+    public bool isBoss = false;
     // Start is called before the first frame update
     public void onDeath()
     {
@@ -38,8 +38,16 @@ public class Death : MonoBehaviour
             {
                 Instantiate(drop4, transform.position, Quaternion.identity);
             }
+            
 
-
+            if(isBoss)
+            {
+                Instantiate(diamondDrop, transform.position, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(goldDrop, transform.position, Quaternion.identity);
+            }
            
         }
         Instantiate(prefabExplosion, transform.position, Quaternion.identity);

@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour
             Explode();
         }
     }
-    void Explode()
+    public void Explode()
     {
         if(prefabExplosion != null)
         {

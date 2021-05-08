@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum SkillState
 {
@@ -46,27 +47,42 @@ public class PlayerData : ScriptableObject
 
         
     }
+
+    public void AddStar(int Amount)
+    {
+        Star += Amount;
+    }
+    public bool PayStar(int Amount)
+    {
+        if(Star < Amount)
+        {
+            return false;
+        }
+        Star -= Amount;
+        return true;
+    }
+    public void AddDiamond(int Amount)
+    {
+        Diamond += Amount;
+    }
+    public bool PayDiamond(int Amount)
+    {
+        if(Diamond < Amount)
+        {
+            return false;
+        }
+        Diamond -= Amount;
+        return true;
+     
+    }
+
 }
 
 [System.Serializable]
 public class SkillList
 {
-    public List<SingleSkill> skills;
+    public List<Skill> skillList;
 }
 
 
-[System.Serializable]
-public class SingleSkill
-{
-    public int id;
-    public Sprite skillImage;
-    public GameObject skillPrefab;
-    public int price;
-    public Currency currency;
-    public SkillState state;
 
-    public void LoadResources()
-    {
-        skillPrefab = Resources.Load("Skill" + id) as GameObject;
-    }
-}

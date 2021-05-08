@@ -33,4 +33,8 @@ public class PlayerHealth : MonoBehaviour
             GameObject.Find("TheGameManager").GetComponent<Game>().GameOver();
         }
     }
+    private void OnDestroy()
+    {
+ 
+    }
 }
